@@ -111,7 +111,21 @@ function getDayType(day: Day): string {
 }
 
 
-console.log(getDayType(Day.Monday));   
-console.log(getDayType(Day.Sunday));   
+// console.log(getDayType(Day.Monday));   
+// console.log(getDayType(Day.Sunday));   
 
+
+//problem 8 
+
+async function squareAsync(n: number): Promise<number> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      n >= 0 ? resolve(n * n) : reject(new Error("Negative number not allowed"));
+    }, 1000);
+  });
+}
+
+
+// squareAsync(4).then(console.log);     
+// squareAsync(-3).catch(console.error);    
 
